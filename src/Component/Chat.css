@@ -1,0 +1,77 @@
+.container{
+    position:absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #FFF;
+    border-radius: 25px;
+    width: 25%;
+    height: 50px;
+    overflow: hidden;
+    
+}
+.row:first-child{
+    background-color: #227AFF;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 50px;
+    padding: 5px;
+    text-align: left;
+}
+.row:nth-child(2){
+    background-color: #FFF;
+    padding: 10px;
+    height: 400px;
+}
+.row:nth-child(3){
+    background-color: #227AFF;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 50px;
+    padding: 14px;
+    text-align: left;
+}
+.col1{
+    display: inline-flex;
+    
+}
+.col2{
+    display: flex;
+}
+.col3{
+    display: flex;
+    justify-content: space-between;
+    gap:15px;
+}
+.ClientName{
+    color: #FFF;
+    font-family: Lao Sans Pro;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 6px;
+}
+.svgPopUp{
+    margin-left:auto ;
+}
+.message{
+    width: 100%;
+    margin: auto;
+}
+input{
+    width: 100%;
+    background-color: #227AFF;
+    border: none;
+    outline: none;
+    color: #FFF;
+    font-family: Lao Sans Pro;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    &::placeholder{
+        color: #ffffff;    
+    }
+}
+
