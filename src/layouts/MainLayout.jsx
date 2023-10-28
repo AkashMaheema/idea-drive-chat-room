@@ -1,6 +1,5 @@
 import Header from "../layouts/header/Header";
 import Footer from "../layouts/footer/Footer";
-import Chat from "../Component/Chat"
 import { Outlet } from "react-router-dom";
 
 
@@ -10,7 +9,6 @@ const MainLayout = () => {
       <Header />
       <Outlet />
       <Footer />
-      <Chat/>
     </div>
   );
 };
