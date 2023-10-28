@@ -1,9 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
-import "./Chat.css";
+import "./Main.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { gsap } from "gsap";
+import Login from "./login";
 
 const Chat = () => {
 
@@ -19,19 +20,15 @@ const Chat = () => {
 
   useEffect(()=> {
     tl.current = gsap.timeline({
-      paused:true
     })
   },[])
   useEffect(()=>{
-    let duv=1;
+    let duv=0.7;
     tl.current.to(container.current,{
       height:500,
       duration:duv,
     })
   },[])
-  useEffect(()=>{
-         menuClicked ? tl.current.play() : tl.current.reverse();
-  },[menuClicked])
 
 
   return (
@@ -64,39 +61,24 @@ const Chat = () => {
               </g>
             </svg>
             <div className="ClientName text-sm">Akash Maheema</div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="svgPopUp"
-              onClick={svgClicked}
-              width="35"
-              height="35"
-              viewBox="0 0 50 50"
-              fill="none"
-            >
-              <mask
-                id="mask0_231_25"
-                maskUnits="userSpaceOnUse"
-                x="0"
-                y="0"
-                width="50"
-                height="50"
-              >
-                <rect width="50" height="50" fill="#D9D9D9" />
-              </mask>
-              <g mask="url(#mask0_231_25)">
-                <path
-                  d="M12.5 47.9167C11.3541 47.9167 10.3732 47.5087 9.55727 46.6927C8.7413 45.8767 8.33331 44.8958 8.33331 43.75V20.8333C8.33331 19.6875 8.7413 18.7066 9.55727 17.8906C10.3732 17.0747 11.3541 16.6667 12.5 16.6667H18.75V20.8333H12.5V43.75H37.5V20.8333H31.25V16.6667H37.5C38.6458 16.6667 39.6267 17.0747 40.4427 17.8906C41.2587 18.7066 41.6666 19.6875 41.6666 20.8333V43.75C41.6666 44.8958 41.2587 45.8767 40.4427 46.6927C39.6267 47.5087 38.6458 47.9167 37.5 47.9167H12.5ZM22.9166 33.3333V10.0521L19.5833 13.3854L16.6666 10.4167L25 2.08334L33.3333 10.4167L30.4166 13.3854L27.0833 10.0521V33.3333H22.9166Z"
-                  fill="#1C1B1F"
-                />
-              </g>
-            </svg>
           </Col>
         </Row>
         <Row>
-          <Col className="col2">chats</Col>
+          <Col className="col2">
+            
+            <div className="resiveMessage">
+                resive
+            </div>
+          </Col>
+          <Col className="col3">
+            
+            <div className="sendMessage">
+                send
+            </div>
+          </Col>
         </Row>
         <Row>
-          <Col className="col3">
+          <Col className="col4">
             <div className="message">
               <input type="text" placeholder="Send Message" />
             </div>
