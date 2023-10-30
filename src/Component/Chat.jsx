@@ -4,20 +4,13 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { gsap } from "gsap";
-import Login from "./login";
+import Login from "./Login";
 
 const Chat = () => {
 
-  const [menuClicked,setmenuClicked]=useState(false);
-  function svgClicked(){
-      setmenuClicked(!menuClicked);
-      console.log(menuClicked)
-  }
-
   const tl=useRef();
   const container=useRef();
-
-
+  
   useEffect(()=> {
     tl.current = gsap.timeline({
     })
@@ -25,7 +18,7 @@ const Chat = () => {
   useEffect(()=>{
     let duv=0.7;
     tl.current.to(container.current,{
-      height:500,
+      height:'70%',
       duration:duv,
     })
   },[])
@@ -33,9 +26,9 @@ const Chat = () => {
 
   return (
     <div className="chat">
-      <Container ref={container}>
-        <Row>
-          <Col className="col1">
+      <Container className="chatContiner"ref={container}>
+        <Row className="chatRow1">
+          <Col className="chatCol1">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="40"
@@ -63,24 +56,24 @@ const Chat = () => {
             <div className="ClientName text-sm">Akash Maheema</div>
           </Col>
         </Row>
-        <Row>
-          <Col className="col2">
+        <Row className="chatRow2">
+          <Col className="chatCol2">
             
             <div className="resiveMessage">
                 resive
             </div>
           </Col>
-          <Col className="col3">
+          <Col className="chatCol3">
             
             <div className="sendMessage">
                 send
             </div>
           </Col>
         </Row>
-        <Row>
-          <Col className="col4">
+        <Row className="chatRow3">
+          <Col className="chatCol4">
             <div className="message">
-              <input type="text" placeholder="Send Message" />
+              <input type="text" placeholder="Send Message" className="inputMessage"/>
             </div>
             <svg
               xmlns="http://www.w3.org/2000/svg"

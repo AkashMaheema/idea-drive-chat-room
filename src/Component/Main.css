@@ -1,88 +1,151 @@
-.container{
-    position:fixed;
-    bottom: 100px;
-    right: 120px;
-    background-color: 227AFFrgb(119, 8, 63);
-    border-radius: 15px;
-    width: 25%;
-    height: 50px;
-    overflow: hidden;
-    
+/* Chat Component */
+.chatContiner {
+  position: fixed;
+  bottom: 100px;
+  right: 120px;
+  background-color: 227AFFrgb (119, 8, 63);
+  border-radius: 15px;
+  width: 25%;
+  height: 1%;
+  padding-left: 10px;
+  padding-right: 10px ;
+  
 }
-.row:first-child{
-    background-color: #227AFF;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    height: 50px;
-    padding: 5px;
-    text-align: left;
+.chatRow1{
+  background-color: #227aff;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 12%;
+  padding: 10px;
+  text-align: left;
 }
-.row:nth-child(2){
-    background-color: #FFF;
-    padding: 10px;
-    height: 400px;
+.chatRow2 {
+  background-color: #fff;
+  padding: 10px;
+  height: 76%;
 }
-.row:nth-child(3){
-    background-color: #227AFF;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    height: 50px;
-    padding: 14px;
-    text-align: left;
+.chatRow3 {
+  display: flex;
+  background-color: #227aff;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  height: 12%;
+  padding: 14px;
+  text-align: left;
 }
-.col1{
-    display: inline-flex;
-    
+.chatCol1 {
+  display: inline-flex;
 }
-.col2{
-    display: flex;
+.chatCol2 {
+  display: flex;
 }
-.col3{
-    display: flex;
-    justify-content: end;
+.chatCol3 {
+  display: flex;
+  justify-content: end;
 }
-.col4{
-    display: flex;
-    justify-content: space-between;
-    gap:15px;
+.chatCol4 {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
 }
-.ClientName{
-    color: #FFF;
-    font-family: Lao Sans Pro;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin-top: 6px;
+.ClientName {
+  color: #fff;
+  font-family: Lao Sans Pro;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 6px;
 }
-.svgPopUp{
-    margin-left:auto ;
+.message {
+  width: 100%;
+  margin: auto;
 }
-.message{
-    width: 100%;
-    margin: auto;
+.inputMessage {
+  display: flex;
+  position: relative;
+  width: 100%;
+  background-color: #227aff;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-family: Lao Sans Pro;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  &::placeholder {
+    color: #ffffff;
+  }
 }
-input{
-    display: flex;
-    position: relative;
-    width: 100%;
-    background-color: #227AFF;
+/* Assistant Component */
+.assistant {
+  position: absolute;
+  bottom: 20px;
+  right: 50px;
+}
+/* AdminPanel Component */
+.apContainer{
+  position: fixed;
+  bottom: 153px;
+  right: 430px;
+  background-color: #227aff;
+  width: 1px;
+  z-index: -1;
+  border-bottom-left-radius:15px;
+  border-top-left-radius: 15px;
+}
+/* .apRow2 {
+  background-color: #fff;
+  padding: 10px;
+} */
+/* Login From */
+.loginContainer,.regContainer {
+  position: fixed;
+  bottom: 100px;
+  right: 120px;
+  background-color: #2c1200;
+  border-radius: 15px;
+  width: 25%;
+  height: 1%;
+  padding: 0;
+}
+.loginRow1 ,.regRow1{
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.loginRow1,.loginRow2,.loginRow3,.loginRow4,.regRow1,.regRow2,.regRow3,.regRow4,.regRow5{
+  padding: 20px;
+  height: 10%;
+  justify-content: center;
+}
+.loginRow4 {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.chatRoomName {
+  color: #fff;
+  font-size: 30px;
+}
+.userName,
+.password,
+.email {
+  color: pink;
+}
+.Input{
+  width: 100%;
+  background-color: #4d2001;
+  border: none;
+
+  &::placeholder {
+    color: #ffffff;
+  }
+}
+.submit{
+    border-radius:10px;
     border: none;
-    outline: none;
-    color: #FFF;
-    font-family: Lao Sans Pro;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-
-    &::placeholder{
-        color: #ffffff; 
-    }
-
-}
-.assistant{
-    position: absolute;
-    bottom:20px;
-    right: 50px;
+    padding: 5px;
+    background-color: #4d2001;
+    color: pink;
 }
