@@ -15,27 +15,10 @@ const Regsiter = () => {
       setShowComponent(!showChat);
     };
   
-    const tl=useRef();
-    const container=useRef();
-  
-  
-    useEffect(()=> {
-      tl.current = gsap.timeline({
-      })
-    },[])
-  
-    useEffect(()=>{
-      let duv=0.7;
-      tl.current.to(container.current,{
-        height:'70%',
-        duration:duv,
-      })
-    },[])
-  
   
     return (
       <div>
-        <Container className="regContainer" ref={container}>
+        <Container className="regContainer">
           <Row className="regRow1">
             <Col className="regCol1">
               <label className="chatRoomName">Live Chat</label>

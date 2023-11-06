@@ -1,32 +1,15 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { } from "react";
 import "./Main.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { gsap } from "gsap";
-import Login from "./Login";
+
 
 const Chat = () => {
 
-  const tl=useRef();
-  const container=useRef();
-  
-  useEffect(()=> {
-    tl.current = gsap.timeline({
-    })
-  },[])
-  useEffect(()=>{
-    let duv=0.7;
-    tl.current.to(container.current,{
-      height:'70%',
-      duration:duv,
-    })
-  },[])
-
-
   return (
     <div className="chat">
-      <Container className="chatContiner"ref={container}>
+      <Container className="chatContiner">
         <Row className="chatRow1">
           <Col className="chatCol1">
             <svg

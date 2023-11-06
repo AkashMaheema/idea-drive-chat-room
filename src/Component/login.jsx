@@ -11,31 +11,13 @@ const Login=() =>{
 
   const [showChat, setShowComponent] = useState(false);
 
-  const Register = () => {
+  const Login = () => {
     setShowComponent(!showChat);
   };
 
-  const tl=useRef();
-  const container=useRef();
-
-
-  useEffect(()=> {
-    tl.current = gsap.timeline({
-    })
-  },[])
-
-  useEffect(()=>{
-    let duv=0.7;
-    tl.current.to(container.current,{
-      height:'70%',
-      duration:duv,
-    })
-  },[])
-
-
   return (
     <div>
-      <Container className="loginContainer" ref={container}>
+      <Container className="loginContainer">
         <Row className="loginRow1">
           <Col className="loginCol1">
             <label className="chatRoomName">Live Chat</label>
@@ -55,13 +37,12 @@ const Login=() =>{
         </Row>
         <Row className="loginRow4">
           <Col className="loginCol4">
-              <input type="submit" value='Login' className="submit" onClick={Register}/>
+              <input type="submit" value='Login' className="submit" onClick={Login}/>
               
           </Col>
         </Row>
       </Container>
       {showChat && <Chat/>}
-      {showChat && <AdminPanel/>}
     </div>
   )
 }

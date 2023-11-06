@@ -2,13 +2,12 @@
 .chatContiner {
   position: fixed;
   bottom: 100px;
-  right: 120px;
-  background-color: 227AFFrgb (119, 8, 63);
+  right: 130px;
+  background-color: #2c1200;
   border-radius: 15px;
   width: 25%;
-  height: 1%;
-  padding-left: 10px;
-  padding-right: 10px ;
+  height: 70%;
+  padding: 0;
   
 }
 .chatRow1{
@@ -96,11 +95,7 @@
   border-bottom-left-radius:15px;
   border-top-left-radius: 15px;
 }
-/* .apRow2 {
-  background-color: #fff;
-  padding: 10px;
-} */
-/* Login From */
+/* Login From and reg From*/
 .loginContainer,.regContainer {
   position: fixed;
   bottom: 100px;
@@ -108,7 +103,7 @@
   background-color: #2c1200;
   border-radius: 15px;
   width: 25%;
-  height: 1%;
+  height: 70%;
   padding: 0;
 }
 .loginRow1 ,.regRow1{
@@ -117,7 +112,7 @@
 }
 .loginRow1,.loginRow2,.loginRow3,.loginRow4,.regRow1,.regRow2,.regRow3,.regRow4,.regRow5{
   padding: 20px;
-  height: 10%;
+  height: 20%;
   justify-content: center;
 }
 .loginRow4 {
